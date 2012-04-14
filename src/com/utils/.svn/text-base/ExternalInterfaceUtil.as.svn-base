@@ -1,0 +1,26 @@
+package com.royaldigit.utils
+{
+	/**
+	 * ...
+	 * @author Jeremy Cummins
+	 */
+	public class ExternalInterfaceUtil
+	{
+		import com.hexagonstar.util.debug.Debug;
+		import flash.external.ExternalInterface;
+		
+		public static function call(fn:String, param:Object=""):void {
+			if (ExternalInterface.available) {
+				try {
+					ExternalInterface.call(fn, param);
+				} catch (err:Error) {
+					Debug.trace("ExternalInterfaceUtil.error: " + err.name + " #" + err.errorID + ": " + fn + " failed ");
+				}
+			} else {
+				Debug.trace("ExternalInterfaceUtil.error: ExternalInterface is not avaliable");
+			}
+		}
+		
+	}
+
+}

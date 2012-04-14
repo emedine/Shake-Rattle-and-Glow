@@ -1,0 +1,12 @@
+//IResizable
+package com.royaldigit.utils
+{
+    import flash.events.*;
+    
+    public interface IResizable
+    {
+        function onResize(e:flash.events.Event):void;
+    }
+}
+
+

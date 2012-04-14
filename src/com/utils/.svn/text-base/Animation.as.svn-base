@@ -1,0 +1,35 @@
+package com.royaldigit.utils 
+{
+	import com.greensock.TweenLite;
+	import flash.display.DisplayObject;
+	/**
+	 * ...
+	 * @author Jeremy Cummins
+	 * 
+	 * Convenience methods for animation
+	 */
+	public class Animation
+	{
+		
+		public static function fadeOut(target:DisplayObject, duration:Number = 0.3, onCompleteFunction:Function = null, visible:Boolean = false):void {
+			function completeFunction():void {
+				target.visible = visible;
+				if (onCompleteFunction != null) onCompleteFunction();
+			}
+			TweenLite.to(target, duration, { alpha:0, onComplete:completeFunction } );
+		}
+		
+		public static function fadeIn(target:DisplayObject, duration:Number = 0.3, onCompleteFunction:Function = null):void {
+			if (!target.visible) target.alpha = 0;
+			target.visible = true;
+			function completeFunction():void {
+				// visible = true added for extra bug protection
+				target.visible = true;
+				if (onCompleteFunction != null) onCompleteFunction();
+			}
+			TweenLite.to(target, duration, { alpha:1, onComplete:completeFunction } );
+		}
+		
+	}
+
+}
