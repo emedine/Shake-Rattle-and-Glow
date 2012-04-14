@@ -1,0 +1,1 @@
+README for Shake, Rattle, and Glow. Flash game made for MolyJam 2012, Programming by Eric Medine and Jessica Kim, art by Joshua Harris and Cat Sze. Progress thru the level, using radiation to open doors, find secrets, and kill enemies.
