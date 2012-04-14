@@ -9,10 +9,12 @@ package com.utils
 		public static const CUSTOMIZE:String = "customize";
 		public static const UPDATEAVATAR:String = "updateAvatar";
 		public static const SHAKEBABY:String = "shakeBaby";
-		public static const SHAKEBABYSOUND:String = "shakeBabySound";
 		public static const SHRINKBABY:String = "shrinkBaby";
 		public static const ZAPAVATAR:String = "zapAvatar";
 		public static const FOUNDSECRET:String = "foundSecret";
+		//
+		public static const SHAKEBABYSOUND:String = "shakeBabySound";
+		public static const DOEXPLOSION:String = "doExplosionSound";
 		public static const DOSCREAM:String = "doScream";
 		//
 		public static const UPDATEHUD:String = "updateHUD";
